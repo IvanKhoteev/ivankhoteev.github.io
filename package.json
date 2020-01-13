@@ -1,0 +1,39 @@
+{
+  "name": "lays-snp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-prod": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "start-dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanKhoteev/ivankhoteev.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanKhoteev/ivankhoteev.github.io/issues"
+  },
+  "homepage": "https://github.com/IvanKhoteev/ivankhoteev.github.io#readme",
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.1",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
