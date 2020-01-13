@@ -28,7 +28,7 @@ jobs:
         CI: true
 
     - name: Deploy
-      uses: actions/deploy-releases@v1
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
