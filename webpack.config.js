@@ -2,6 +2,7 @@ const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const autoprefixer = require("autoprefixer");
 
 module.exports = {
   entry: './src/index.js',
@@ -24,7 +25,6 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
-          'sass-loader',
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
@@ -32,6 +32,8 @@ module.exports = {
             },
           },
           'css-loader',
+          'postcss-loader',
+          'sass-loader',
         ],
       },
       {
