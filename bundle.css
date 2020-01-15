@@ -1,1 +1,1 @@
-body{background-color:#00f}
+.main-nav{outline:dashed #00f;width:130px}.page-header{outline:solid red;width:680px;margin:0 auto;min-height:160px}.page-header__wrapper{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between}.page-header__logo{width:130px}.page-header__logo-hashtag{width:250px}.page{margin:0;padding:0;background-size:680px;background-position:top -144px left 50%;min-height:5513px;min-width:500px}
