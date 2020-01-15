@@ -1,0 +1,19 @@
+.page-header {
+  outline: solid red;
+  width: 680px;
+  margin: 0 auto;
+  min-height: 160px;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  width: 130px;
+}
+
+.page-header__logo-hashtag {
+  width: 250px;
+}

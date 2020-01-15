@@ -1,5 +1,3 @@
-import './index.html';
-
 function importAll (r) {
   r.keys().forEach(r);
 }

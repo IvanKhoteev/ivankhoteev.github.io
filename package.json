@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "build-prod": "webpack --mode production",
     "build-dev": "webpack --mode development",
-    "start-dev": "webpack-dev-server --open --mode development"
+    "start-dev": "webpack-dev-server --open --inline-source-map --watch --history-api-fallback --inline --progress --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,14 @@
   },
   "homepage": "https://github.com/IvanKhoteev/ivankhoteev.github.io#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
     "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
@@ -36,6 +41,11 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "circular-dependency-plugin": "^5.2.0",
+    "inspectpack": "^4.3.0",
+    "lodash": "^4.17.15",
+    "speed-measure-webpack-plugin": "^1.3.1",
+    "unused-files-webpack-plugin": "^3.4.0"
   }
 }

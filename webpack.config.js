@@ -1,10 +1,18 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-// const autoprefixer = require("autoprefixer");
+const autoprefixer = require("autoprefixer");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const { DuplicatesPlugin } = require('inspectpack/plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin"); 
+const smp = new SpeedMeasurePlugin();
 
-module.exports = {
+const config = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -14,10 +22,21 @@ module.exports = {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+        template: __dirname + "/src/index.html",
+        inject: 'body'
+    }),
     new MiniCssExtractPlugin({
       filename: 'bundle.css',
       ignoreOrder: false,
     }),
+    new CleanWebpackPlugin(),
+    new UnusedFilesWebpackPlugin({
+      patterns: 'src/**/*.*',
+    }),
+    new CaseSensitivePathsPlugin(),
+    new DuplicatesPlugin(),
+    new CircularDependencyPlugin(),
   ],
   module: {
     rules: [
@@ -52,21 +71,26 @@ module.exports = {
         ],
       },
       {
-        test: /index.html/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'index.html',
-            },
-          },
-        ],
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
-    ]
+    ],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000
   }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = smp.wrap(config);
+} else {
+  module.exports = config;
 }
