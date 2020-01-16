@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   width: 100%;
-}
+  display: none;
 
-.main-nav__wrapper {
+  &--active {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -16,6 +18,17 @@
 .main-nav__item-wrapper {
   border-top: 1px solid rgba(221, 221, 221, 0.75);;
   min-height: 80px;
+
+  &--close {
+    background-color: rgb(240, 237, 237);
+    min-height: 60px;
+
+    font-family: "GothamPro";
+    font-size: 12px;
+    font-weight: 400;
+
+    display: flex;
+  }
 }
 
 .main-nav__item {
@@ -74,6 +87,12 @@
 .main-nav__item-link:focus,
 .main-nav__item-link:visited {
   text-decoration: none;
-  color: black;
+  color: #555;
   margin: auto;
+}
+
+.main-nav__item-link--close {
+  color: #8e8d8d;
+  text-shadow: 1px 2px 2px white;
+  letter-spacing: 0.2px;
 }
