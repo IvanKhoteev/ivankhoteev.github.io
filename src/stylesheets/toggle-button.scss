@@ -1,0 +1,41 @@
+.toggle-button {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-button__line {
+  margin: 0;
+  padding: 0;
+
+  min-width: 32px;
+  min-height: 5px;
+
+  background: #fc202e;
+  opacity: 1;
+  transition: all .2s ease-in-out;
+}
+
+.toggle-button__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  padding-bottom: 1px;
+  padding-right: 2px;
+}
+
+.main-nav__toggle-button {
+  display: none;
+}
+
+.toggle-button__line1 {
+}
+
+.toggle-button__line2 {
+  margin-top: 5px;
+}
+
+.toggle-button__line3 {
+  margin-top: 6px;
+}

@@ -41,6 +41,10 @@ const config = {
   module: {
     rules: [
       {
+       test: /\.(woff|woff2|ttf|eot)$/,
+       use: 'file-loader?name=fonts/[name].[ext]!static'
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           'style-loader',

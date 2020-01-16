@@ -1,4 +1,79 @@
 .main-nav {
-  outline: dashed blue;
-  width: 130px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main-nav__wrapper {
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__item-wrapper {
+  border-top: 1px solid rgba(221, 221, 221, 0.75);;
+  min-height: 80px;
+}
+
+.main-nav__item {
+  font-family: "GothamPro";
+  font-size: 14px;
+  font-weight: 400;
+
+  width: 100%;
+
+  display: flex;
+
+  min-height: 80px;
+
+  text-align: center;
+  position: relative;
+
+  box-sizing: border-box;
+
+  background-color: #f6f6f6;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
+  &--active {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    background-color: white;
+  };
+}
+
+.main-nav__item-icon:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: 19px;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+
+.main-nav__item-icon--camera:before {
+  background-image: url("../images/icons/camera.png");
+}
+
+.main-nav__item-icon--present:before {
+  background-image: url("../images/icons/present.png");
+}
+
+.main-nav__item-icon--map:before {
+  background-image: url("../images/icons/map.png");
+}
+
+.main-nav__item-link,
+.main-nav__item-link:hover,
+.main-nav__item-link:focus,
+.main-nav__item-link:visited {
+  text-decoration: none;
+  color: black;
+  margin: auto;
 }

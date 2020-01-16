@@ -2,34 +2,56 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Lay's Yellow Trend</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" type="text/css" href="bundle.css">
 </head>
 <body class="page">
   <header class="page-header">
-    <a href="#" class="page-header__wrapper">
-      <img class="page-header__logo-image" src="images/logo/logo-header.png" alt="Логотип" width="97" height="85">
-      
+    <div class="page-header_wrapper">
+      <div class="page-header__logo">
+        <img class="page-header__logo-image" src="images/logo/logo-header.png" alt="Логотип">
+      </div>
+
       <p class="page-header__logo-hashtag">#летосLays</p>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">Галерея</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">О проекте</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Лето с Lay's</a>
-            </li>
-          </ul>
+      <button class="page-header__menu-toggle toggle-button">
+        <div class="toggle-button__wrapper">
+          <div class="toggle-button__line toggle-button__line1"></div>
+          <div class="toggle-button__line toggle-button__line2"></div>
+          <div class="toggle-button__line toggle-button__line3"></div>
         </div>
-      </nav>
-    </a>
+      </button>
+    </div>
+
+    <nav class="main-nav page-header__nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item-wrapper">
+            <div class="main-nav__item main-nav__item--active main-nav__item-icon main-nav__item-icon--camera">
+              <a href="#" class="main-nav__item-link">
+                Галерея
+              </a>
+            </div>
+          </li>
+          <li class="main-nav__item-wrapper">
+            <div class="main-nav__item main-nav__item-icon main-nav__item-icon--present">
+              <a href="#" class="main-nav__item-link">
+                О проекте
+              </a>
+            </div>
+          </li>
+          <li class="main-nav__item-wrapper">
+            <div class="main-nav__item main-nav__item-icon main-nav__item-icon--map">
+              <a href="#" class="main-nav__item-link">
+                Лето с Lay's
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <!-- <header class="page-header">
     <a href="#" class="page-header__logo">
