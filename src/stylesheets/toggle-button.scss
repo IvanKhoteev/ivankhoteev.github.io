@@ -5,10 +5,11 @@
 }
 
 .toggle-button__line {
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  right: 24px;
+  margin: auto;
 
-  min-width: 32px;
+  min-width: 34px;
   min-height: 5px;
 
   background: #fc202e;
@@ -17,12 +18,9 @@
 }
 
 .toggle-button__wrapper {
-  display: flex;
-  flex-direction: column;
-
-  margin: auto;
-  padding-bottom: 1px;
-  padding-right: 2px;
+  position: relative;
+  min-width: 80px;
+  min-height: 80px;
 }
 
 .main-nav__toggle-button {
@@ -30,12 +28,13 @@
 }
 
 .toggle-button__line1 {
+  top: 28px;
 }
 
 .toggle-button__line2 {
-  margin-top: 5px;
+  top: 38px;
 }
 
 .toggle-button__line3 {
-  margin-top: 6px;
+  top: 48px;
 }
