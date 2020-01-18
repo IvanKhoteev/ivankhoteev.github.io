@@ -29,12 +29,27 @@
 
 .toggle-button__line1 {
   top: 28px;
+  transform-origin: left center;
+}
+
+.toggle-button__line1--close {
+  transform: rotate(45deg) scale(0.85);
 }
 
 .toggle-button__line2 {
   top: 38px;
 }
 
+.toggle-button__line2--close {
+  opacity: 0;
+  transform: scale(0);
+}
+
 .toggle-button__line3 {
   top: 48px;
+  transform-origin: left center;
+}
+
+.toggle-button__line3--close {
+  transform: rotate(-45deg) scale(0.85);
 }
