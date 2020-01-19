@@ -2,26 +2,25 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #f6f6f6;
-  display: none;
-
-  &--active {
-    display: block;
-  }
 }
 
 .main-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .main-nav__item-wrapper {
   border-top: 1px solid rgba(221, 221, 221, 0.75);;
   min-height: 80px;
+  background-clip: border-box;
+  background-color: white;
+  opacity: 0;
+  position: relative;
+  transition: all .5s ease;
 
   &--close {
-    background-color: rgb(240, 237, 237);
     min-height: 60px;
 
     font-family: "GothamPro";
@@ -29,7 +28,36 @@
     font-weight: 400;
 
     display: flex;
+
+    background-color: #f0eded;
+
+    opacity: 0;
+    position: relative;
   }
+}
+
+.main-nav__item-wrapper-animated {
+  opacity: 1;
+}
+
+.main-nav__item-wrapper1,
+.main-nav__item-wrapper3 {
+  left: -50px;
+}
+
+.main-nav__item-wrapper1.main-nav__item-wrapper-animated ,
+.main-nav__item-wrapper3.main-nav__item-wrapper-animated  {
+  transform: translate3d(50px,0,0);
+}
+
+.main-nav__item-wrapper2,
+.main-nav__item-wrapper4 {
+  left: 50px;
+}
+
+.main-nav__item-wrapper2.main-nav__item-wrapper-animated,
+.main-nav__item-wrapper4.main-nav__item-wrapper-animated {
+  transform: translate3d(-50px,0,0);
 }
 
 .main-nav__item {
@@ -55,8 +83,6 @@
   &--active {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-
-    background-color: white;
   };
 }
 
