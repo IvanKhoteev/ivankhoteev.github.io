@@ -1,0 +1,51 @@
+.promo-text {
+  margin: 0;
+}
+
+.promo-text__top {
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-left: 10px;
+  
+  width: 136px;
+  height: 44px;
+
+  letter-spacing: 1.8px;
+  line-height: 44px;
+}
+
+.promo-text__middle {
+  font-family: "GothamPro-Light";
+  font-size: 25px;
+
+  margin: 0 auto;
+  margin-top: -4px;
+  padding-left: 7px;
+
+  width: 136px;
+  height: 24px;
+
+  letter-spacing: 1.2px;
+}
+
+.promo-text__bottom {
+  text-transform: none;
+
+  margin-top: 2px;
+  padding-left: 8px;
+
+  font-family: "GothamPro-Light";
+  font-size: 25px;
+}
+
+.promo-text__special {
+  text-transform: none;
+
+  padding-left: 4px;
+
+  font-family: "GothamPro-Black";
+  font-size: 39.5px;
+
+  letter-spacing: -0.3px;
+  line-height: 28px;
+}
