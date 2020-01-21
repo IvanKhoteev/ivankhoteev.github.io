@@ -1,0 +1,132 @@
+@-webkit-keyframes slideUpIcon {
+  from { transform: scale(0); }
+  to {  transform: scale(1); }
+}
+
+@-webkit-keyframes showUp {
+  from { opacity: 0; }
+  to {  opacity: 1; }
+}
+
+$icon-size: 65px;
+
+.promo-icon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.promo-icon__item {
+  min-width: 103px;
+  text-align: center;
+  font-family: "GothamPro";
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  line-height: 14px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-icon__item--camera {
+  margin-right: -30px;
+  margin-left: -2px;
+  position: relative;
+}
+
+.promo-icon__item--heart {
+  margin-left: 3px;
+  margin-right: -2px;
+}
+
+.promo-icon__item--prize {
+  margin-left: -23px;
+  margin-right: 4px;
+}
+
+.promo-icon__item--camera:before {
+  background-image: url("../images/promo/photo.png");
+  background-position: 5px 5px;
+  background-size: 54px 54px;
+
+  animation-delay: 1.6s;
+}
+
+.promo-icon__item--heart:before {
+  background-image: url("../images/promo/heart.png");
+  background-position: 6px 7px;
+  background-size: 53px 53px;
+
+  animation-delay: 2s;
+}
+
+.promo-icon__item--prize:before {
+  background-image: url("../images/promo/box.png");
+  background-position: 7px 5px;
+  background-size: 54px 54px;
+
+  animation-delay: 2.4s;
+}
+
+.promo-icon__item:before {
+  content: '';
+  display: block;
+  min-width: $icon-size;
+  min-height: $icon-size;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 9px;
+  transform: scale(0);
+
+  animation-name: slideUpIcon;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(.25,.1,.38,1.45);
+  animation-fill-mode: forwards;
+}
+
+.promo-icon__text {
+  animation-name: showUp;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(.25,.1,.38,1.45);
+  animation-fill-mode: forwards;
+}
+
+.promo-icon__text--camera {
+  min-width: 105px;
+  display: inline-block;
+
+  position: absolute;
+  top: 99px;
+  left: -3px;
+  letter-spacing: -0.1px;
+  opacity: 0;
+
+  animation-delay: 1.6s;
+}
+
+.promo-icon__hashtag {
+  color: #f73934;
+  line-height: 15px;
+}
+
+.promo-icon__text--heart {
+  padding-top: 1px;
+  padding-left: 4px;
+  opacity: 0;
+
+  animation-delay: 2s;
+}
+
+.promo-icon__text--prize {
+  padding-left: 2px;
+  opacity: 0;
+
+  animation-delay: 2.4s;
+}
+
+
+
