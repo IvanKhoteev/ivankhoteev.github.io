@@ -1,13 +1,20 @@
+.page-main {
+  z-index: 10;
+  margin-top: 80px;
+  height: 2000px;
+}
+
 .page-main__promo {
   margin: 0;
   padding: 0;
-  padding-top: 80px;
+
+  background-clip: content-box;
 
   width: 100%;
-  min-height: calc(558/320*100vw);
+  height: calc(553/320*100vw);
 
   background-image: url("../images/promo/promo-mobile.jpg");
-  background-position: bottom;
+  background-position: top;
   background-size: 100%, 100%, cover;
   background-repeat: no-repeat;
   background-color: #57b8e2;
@@ -38,4 +45,38 @@
 
   display: flex;
   flex-direction: column;
+}
+
+.page-main__gallery {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main__gallery-main-wrapper {
+  height: calc(100vw);
+  background-image: url("../images/gallery/gallery-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100%, calc(100vw), cover;
+}
+
+.page-main__gallery-main .page-main__button-wrapper {
+  width: 50%;
+  display: flex;
+}
+
+.page-main__button {
+  border: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+  width: 12.3rem;
+  height: 3.6rem;
+  font-size: 1.4rem;
+  letter-spacing: .4px;
+  line-height: 3.1rem;
+  background-color: rgba(168, 5, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 25.5rem;
+  margin-left: 2.1rem;
+
 }

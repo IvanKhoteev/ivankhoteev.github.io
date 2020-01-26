@@ -7,7 +7,7 @@ const buttonLine3 = toggleButton.querySelector(".toggle-button__line3");
 const menu = document.querySelector('.page-header__nav');
 const menuItemWrappers = menu.querySelectorAll('.main-nav__item-wrapper');
 
-toggleButton.addEventListener('click', function() {
+const toggleMenu = function () {
   buttonLine1.classList.toggle('toggle-button__line1--close');
   buttonLine2.classList.toggle('toggle-button__line2--close');
   buttonLine3.classList.toggle('toggle-button__line3--close');
@@ -15,5 +15,15 @@ toggleButton.addEventListener('click', function() {
   for (var i = 0; i < menuItemWrappers.length; ++i) {
     menuItemWrappers[i].classList.toggle('main-nav__item-wrapper-animated');
   }
+}
+
+const closeMenuItem = pageHeader.querySelector('.main-nav__item-wrapper--close');
+
+closeMenuItem.addEventListener('click', function() {
+  toggleMenu();
+});
+
+toggleButton.addEventListener('click', function() {
+  toggleMenu();
 });
 

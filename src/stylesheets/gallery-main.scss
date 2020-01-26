@@ -1,0 +1,48 @@
+.gallery-main {
+  display: flex;
+}
+
+.gallery-main__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.gallery-main__socials-image {
+  width: 15rem;
+  padding-left: 2rem;
+  padding-top: 3.1rem;
+}
+
+.gallery-main__text {
+  padding-top: 0.9rem;
+}
+
+.gallery-main__ordinary-text:last-of-type {
+  font-size: 2.25rem;
+  line-height: 3.35rem;
+  letter-spacing: -0.02rem;
+}
+
+.gallery-main__ordinary-text {
+  font-family: "GothamPro-Bold";
+  font-size: 2.25rem;
+  line-height: 3.112rem;
+  font-weight: 400;
+  margin: 0;
+  margin-left: 4.1rem;
+}
+
+.gallery-main__hashtag-text {
+  display: inline-block;
+  background-color: white;
+  font-size: 2.3rem;
+  margin: 0;
+  margin-top: -.21rem;
+  margin-left: 3.6rem;
+  padding: 0.2rem 0.7rem 0 0.5rem;
+  line-height: 2.9rem;
+  color: #d62b2b;
+  font-family: GothamPro;
+}
