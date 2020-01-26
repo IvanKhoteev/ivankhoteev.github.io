@@ -1,5 +1,6 @@
 .gallery-main {
   display: flex;
+  height: 100vw;
 }
 
 .gallery-main__wrapper {
@@ -10,19 +11,13 @@
 }
 
 .gallery-main__socials-image {
-  width: 15rem;
-  padding-left: 2rem;
+  width: 14.8rem;
+  padding-left: 2.1rem;
   padding-top: 3.1rem;
 }
 
 .gallery-main__text {
-  padding-top: 0.9rem;
-}
-
-.gallery-main__ordinary-text:last-of-type {
-  font-size: 2.25rem;
-  line-height: 3.35rem;
-  letter-spacing: -0.02rem;
+  padding-top: 1rem;
 }
 
 .gallery-main__ordinary-text {
@@ -31,7 +26,7 @@
   line-height: 3.112rem;
   font-weight: 400;
   margin: 0;
-  margin-left: 4.1rem;
+  margin-left: 4.2rem;
 }
 
 .gallery-main__hashtag-text {
