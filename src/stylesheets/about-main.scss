@@ -1,0 +1,41 @@
+.about-main {
+  width: 100%;
+  height: 100vw;
+  background-image: url("../images/about/about-main-mobile.png");
+  background-size: 100%, 100%, cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  color: white;
+}
+
+.about-main__content {
+  padding: 0;
+  margin: 0;
+  padding-top: 4.6rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.about-main__text {
+  font-family: "GothamPro-Bold";
+  margin: 0;
+  margin-left: 3.7rem;
+  font-size: 3.18rem;
+  line-height: 3.5rem;
+}
+
+.about-main__description {
+  font-family: "GothamPro";
+  margin-top: 2.57rem;
+  font-size: 1.35rem;
+  line-height: 1.78rem;
+  margin-left: 3.9rem;
+  letter-spacing: -.02rem;
+}
+
+.about-main__lays-image {
+  display: none;
+}
