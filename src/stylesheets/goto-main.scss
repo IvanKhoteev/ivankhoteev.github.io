@@ -5,20 +5,21 @@
   background-size: 100%, 100%, cover;
   background-repeat: no-repeat;
   z-index: 1;
-}
+  margin-bottom: -1.5%;
 
-.goto-main__content {
-  padding: 0;
-  margin: 0;
-  padding-top: 54vw;
-  text-align: center;
-  position: relative;
-}
+  &__content {
+    padding: 0;
+    margin: 0;
+    padding-top: 54vw;
+    text-align: center;
+    position: relative;
+  }
 
-.goto-main__text {
-  font-family: "GothamPro-Bold";
-  font-size: 3.25rem;
-  line-height: 3.5rem;
-  letter-spacing: 0.04rem;
-  padding-left: 0.5rem;
+  &__text {
+    font-family: "GothamPro-Bold";
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.04rem;
+    padding-left: 0.5rem;
+  }
 }

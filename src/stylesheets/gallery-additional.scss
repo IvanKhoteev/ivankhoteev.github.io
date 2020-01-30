@@ -2,69 +2,68 @@
   margin: 0;
   padding: 0;
   height: calc(100vw - 26px);
-}
 
-.gallery-additional__images-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-}
+  &__images-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
 
-.gallery-additional__item {
-  width: 33.3%;
-  height: 33.3%;
-  position: relative;
-}
+  &__item-wrapper {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    box-sizing: border-box;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+  }
 
-.gallery-additional__item-wrapper {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  box-sizing: border-box;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: border-box;
-}
+  &__item {
+    width: 33.3%;
+    height: 33.3%;
+    position: relative;
+  }
 
-.gallery-additional__item--1 {
-  background-image: url("../images/gallery-additional/image-1.png");
-}
+  &__item--1 {
+    background-image: url("../images/gallery-additional/image-1.png");
+  }
 
-.gallery-additional__item--2 {
-  background-image: url("../images/gallery-additional/image-2.png");
-}
+  &__item--2 {
+    background-image: url("../images/gallery-additional/image-2.png");
+  }
 
-.gallery-additional__item--3 {
-  background-image: url("../images/gallery-additional/image-3.png");
-}
+  &__item--3 {
+    background-image: url("../images/gallery-additional/image-3.png");
+  }
 
-.gallery-additional__item--4 {
-  background-image: url("../images/gallery-additional/image-4.png");
-}
+  &__item--4 {
+    background-image: url("../images/gallery-additional/image-4.png");
+  }
 
-.gallery-additional__item--5 {
-  background-image: url("../images/gallery-additional/image-5.png");
-}
+  &__item--5 {
+    background-image: url("../images/gallery-additional/image-5.png");
+  }
 
-.gallery-additional__item--6 {
-  background-image: url("../images/gallery-additional/image-6.png");
-}
+  &__item--6 {
+    background-image: url("../images/gallery-additional/image-6.png");
+  }
 
-.gallery-additional__item--7 {
-  background-image: url("../images/gallery-additional/image-7.png");
-}
+  &__item--7 {
+    background-image: url("../images/gallery-additional/image-7.png");
+  }
 
-.gallery-additional__item--8 {
-  background-image: url("../images/gallery-additional/image-8.png");
-}
+  &__item--8 {
+    background-image: url("../images/gallery-additional/image-8.png");
+  }
 
-.gallery-additional__item--9 {
-  background-image: url("../images/gallery-additional/image-9.png");
+  &__item--9 {
+    background-image: url("../images/gallery-additional/image-9.png");
+  }
 }
-

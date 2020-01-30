@@ -2,50 +2,50 @@
   display: flex;
   margin: 0;
   padding: 0;
-}
 
-.toggle-button__line {
-  position: absolute;
-  right: 24px;
-  margin: auto;
+  &__line {
+    position: absolute;
+    right: 24px;
+    margin: auto;
 
-  min-width: 34px;
-  min-height: 5px;
+    min-width: 34px;
+    min-height: 5px;
 
-  background: #fc202e;
-  opacity: 1;
-  transition: all .2s ease-in-out;
-}
+    background: #fc202e;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+  }
 
-.toggle-button__wrapper {
-  position: relative;
-  min-width: 80px;
-  min-height: 80px;
-}
+  &__wrapper {
+    position: relative;
+    min-width: 80px;
+    min-height: 80px;
+  }
 
-.toggle-button__line1 {
-  top: 28px;
-  transform-origin: left center;
-}
+  &__line1 {
+    top: 28px;
+    transform-origin: left center;
+  }
 
-.toggle-button__line1--close {
-  transform: rotate(45deg) scale(0.85);
-}
+  &__line1--close {
+    transform: rotate(45deg) scale(0.85);
+  }
 
-.toggle-button__line2 {
-  top: 38px;
-}
+  &__line2 {
+    top: 38px;
+  }
 
-.toggle-button__line2--close {
-  opacity: 0;
-  transform: scale(0);
-}
+  &__line2--close {
+    opacity: 0;
+    transform: scale(0);
+  }
 
-.toggle-button__line3 {
-  top: 48px;
-  transform-origin: left center;
-}
+  &__line3 {
+    top: 48px;
+    transform-origin: left center;
+  }
 
-.toggle-button__line3--close {
-  transform: rotate(-45deg) scale(0.85);
+  &__line3--close {
+    transform: rotate(-45deg) scale(0.85);
+  }
 }
