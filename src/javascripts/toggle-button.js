@@ -17,10 +17,20 @@ const toggleMenu = function () {
   }
 }
 
+const closeMenu = function () {
+  buttonLine1.classList.remove('toggle-button__line1--close');
+  buttonLine2.classList.remove('toggle-button__line2--close');
+  buttonLine3.classList.remove('toggle-button__line3--close');
+
+  for (var i = 0; i < menuItemWrappers.length; ++i) {
+    menuItemWrappers[i].classList.remove('main-nav__item-wrapper-animated');
+  }
+}
+
 const closeMenuItem = pageHeader.querySelector('.main-nav__item-wrapper--close');
 
 closeMenuItem.addEventListener('click', function() {
-  toggleMenu();
+  closeMenu();
 });
 
 toggleButton.addEventListener('click', function() {
