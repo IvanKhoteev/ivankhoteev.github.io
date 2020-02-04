@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .main-nav {
   margin: 0;
   padding: 0;
@@ -69,6 +72,7 @@
     width: 40px;
     height: 40px;
     background-size: 40px 40px;
+    background-repeat: no-repeat;
   }
 
   &__item-icon--camera:before {
@@ -106,6 +110,92 @@
     text-decoration: none;
     color: #555;
     margin: auto;
+  }
+
+  @media (min-width: $desktop-one) {
+    &__item-wrapper {
+      border: none;
+      min-height: 118px;
+      margin-bottom: 6px;
+
+      opacity: 1;
+
+      &--close {
+        display: none;
+      }
+    }
+
+    &__item-wrapper1,
+    &__item-wrapper2,
+    &__item-wrapper3,
+    &__item-wrapper4 {
+      left: 0;
+    }
+
+    &__item-wrapper1 {
+      margin-bottom: 5px;
+    }
+
+    &__item-wrapper2 {
+      margin-bottom: 17px;
+
+      &__item-link {
+        margin-top: 10px;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      min-height: 118px;
+      margin-top: -10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+
+      text-align: center;
+      border: none;
+    }
+
+    &__item-icon:before {
+      content: '';
+      display: block;
+      position: static;
+    }
+
+    &__item-icon--camera:before {
+      padding-left: 2px;
+      width: 48px;
+      height: 48px;
+      background-size: 48px 48px;
+    }
+
+    &__item-icon--present:before {
+      margin-left: -1px;
+      margin-top: 1px;
+      width: 49px;
+      height: 59px;
+      background-size: 49px 59px;
+    }
+
+    &__item-icon--map:before {
+      margin-top: 9px;
+      padding-left: 5px;
+      width: 51px;
+      height: 49px;
+      background-size: 51px 49px;
+    }
+
+    &__item-link,
+    &__item-link:hover,
+    &__item-link:focus,
+    &__item-link:visited {
+      min-width: 120px;
+      margin-top: 10px;
+      margin-left: 13px;
+    }
   }
 }
 

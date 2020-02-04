@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .page-header {
   padding: 0;
   margin: 0 auto;
@@ -18,7 +21,7 @@
     top: -80px;
   }
 
-  &_wrapper {
+  &__wrapper {
     min-height: 80px;
 
     box-sizing: border-box;
@@ -70,5 +73,49 @@
 
     top: 80px;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-one) {
+    position: static;
+    min-width: 150px;
+
+    &__wrapper {
+      min-height: 204px;
+      margin-bottom: 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__logo {
+      margin-bottom: 6px;
+    }
+
+    &__logo-image {
+      width: 100%;
+      height: 100%;
+      margin-top: 26px;
+
+      position: static;
+    }
+
+    &__logo-hashtag {
+      padding: 0;
+      margin: 0;
+      margin-left: -2px;
+      margin-bottom: auto;
+
+      min-width: auto;
+      min-height: auto;
+    }
+
+    &__hashtag-text {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    &__nav {
+      position: static;
+    }
   }
 }
