@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .gallery-additional {
   margin: 0;
   padding: 0;
@@ -65,5 +68,9 @@
 
   &__item--9 {
     background-image: url("../images/gallery-additional/image-9.png");
+  }
+
+  @media (min-width: $desktop-one) {
+    flex-basis: 50%;
   }
 }

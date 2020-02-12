@@ -34,6 +34,11 @@ $desktop-two: 1400px;
 
   @media (min-width: $desktop-one) {
     display: flex;
+
+    &__desktop-content-and-footer-wrapper {
+      flex-grow: 1;
+      width: calc(100vw - 150px);
+    }
   }
 
   @media (min-width: $desktop-two) {

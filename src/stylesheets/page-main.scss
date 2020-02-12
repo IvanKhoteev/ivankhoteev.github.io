@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .page-main {
   z-index: 10;
 
@@ -7,13 +10,11 @@
     background-color: #57b8e3;
     z-index: 11;
 
-    // background-clip: content-box;
-
     width: 100%;
     height: calc(553/320*100vw);
 
     background-image: url("../images/promo/promo-mobile.jpg");
-    background-position: bottom;
+    background-position: 0 80px;
     background-size: 100%, 100%, cover;
     background-repeat: no-repeat;
 
@@ -164,9 +165,86 @@
       z-index: -1;
     };
   }
+
+  @media (min-width: $desktop-one) {
+    &__promo {
+      padding: 0;
+      height: calc(580 / 1252 * (100vw - 150px));
+      background-image: url("../images/promo/promo-desktop-1400.jpg");
+      background-position: 0 0;
+    }
+
+    &__content {
+      flex-direction: column;
+      display: flex;
+      height: 100%;
+      width: 15.25rem;
+    }
+
+    &__gallery-main-wrapper {
+      display: flex;
+      height: auto;
+      position: relative;
+      background-image: url("../images/gallery/gallery-desktop-1400.jpg");
+      background-repeat: no-repeat;
+      background-size: 50%, auto, cover;
+    }
+
+    &__gallery_main {
+      flex-basis: 50%;
+      height: auto;
+      background: none;
+      background-color: green;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__gallery-additional {
+      flex-basis: 50%;
+      height: calc((100vw - 150px) / 2);
+      background: none;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__promo-text {
+      margin: 0;
+
+      color: #d62b2b;
+    }
+
+    &__gallery {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__button {
+      width: auto;
+      font-size: 0.5rem;
+      letter-spacing: 0.055rem;
+    }
+
+    &__button--gallery {
+      margin: auto;
+      background-color: rgba(168, 5, 0, 0.1);
+      height: auto;
+      line-height: 1.1rem;
+      padding-top: 0.25rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
 }
 
 .page-main__gallery-main .page-main__button-wrapper {
   width: 50%;
   display: flex;
+
+  @media (min-width: $desktop-one) {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 0.8rem;
+  }
 }

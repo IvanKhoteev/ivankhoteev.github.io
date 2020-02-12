@@ -77,7 +77,7 @@ $desktop-two: 1400px;
 
   @media (min-width: $desktop-one) {
     position: static;
-    min-width: 150px;
+    width: 150px;
 
     &__wrapper {
       min-height: 204px;

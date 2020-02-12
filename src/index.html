@@ -102,7 +102,11 @@
         <div class="page-main__gallery-main-wrapper">
           <div class="page-main__gallery-main gallery-main">
             <div class="gallery-main__wrapper">
-              <img src="images/gallery/gallery-socials-mobile.png" class="gallery-main__socials-image" alt="Картинка с социальными сетями">
+              <picture>
+                <source media="(min-width: 680px)" srcset="images/gallery/gallery-socials-desktop-1400.png">
+                <source media="(min-width: 1400px)" srcset="images/gallery/gallery-socials-desktop-1400.png">
+                <img src="images/gallery/gallery-socials-mobile.png" class="gallery-main__socials-image" alt="Картинка с социальными сетями">
+              </picture>
               <div class="gallery-main__text">
                 <p class="gallery-main__ordinary-text">Загружай</p>
                 <p class="gallery-main__ordinary-text">фото</p>

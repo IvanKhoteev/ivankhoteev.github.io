@@ -1,3 +1,8 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
+$margin-left: 1.5rem;
+
 .promo-text {
   margin: 0;
 
@@ -47,5 +52,54 @@
 
     letter-spacing: -0.3px;
     line-height: 28px;
+  }
+
+  @media (min-width: $desktop-one) {
+    $margin-left: 1.45rem;
+    $font-size: 2.12rem;
+
+    margin-left: $margin-left;
+    font-size: $font-size;
+
+    &__top {
+      margin: 0;
+      margin-left: $margin-left;
+      margin-bottom: 0.25rem;
+
+      width: auto;
+      height: auto;
+
+      font-size: $font-size;
+      letter-spacing: 0.12rem;
+      line-height: 1.3rem;
+    }
+
+    &__middle {
+      margin: 0;
+      margin-left: 1.5rem;
+      margin-bottom: 0.3rem;
+
+      width: auto;
+      height: auto;
+
+      font-size: 1.2rem;
+      letter-spacing: 0.07rem;
+    }
+
+    &__bottom {
+      font-size: 1.2rem;
+    }
+
+
+    &__special {
+      width: auto;
+      height: auto;
+
+      padding-left: 0.2rem;
+
+      font-size: 1.9rem;
+      letter-spacing: 0;
+      line-height: 0.9rem;
+    }
   }
 }

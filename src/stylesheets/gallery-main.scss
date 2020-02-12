@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .gallery-main {
   display: flex;
   height: 100vw;
@@ -39,5 +42,50 @@
     line-height: 2.9rem;
     color: #d62b2b;
     font-family: GothamPro;
+  }
+
+  @media (min-width: $desktop-one) {
+    flex-basis: 50%;
+    height: calc((100vw - 150px) / 2);
+    position: relative;
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__socials-image {
+      width: 4rem;
+      padding: 0;
+      margin-top: 0.75rem;
+      margin-left: -5.15rem;
+    }
+
+    &__text {
+      width: 100%;
+      padding-top: 0;
+      margin-top: -0.1rem;
+    }
+
+    &__ordinary-text {
+      font-size: 1rem;
+      line-height: 1.29rem;
+      letter-spacing: -0.03rem;
+
+      margin: 0;
+      margin-left: 2.1rem
+    }
+
+    &__hashtag-text {
+      font-size: 1rem;
+      margin: 0;
+      margin-left: 1.95rem;
+      margin-top: -0.05rem;
+      line-height: 0.9rem;
+      letter-spacing: -0.03rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.15rem;
+      padding-left: 0.15rem;
+      padding-right: 0.4rem;
+    }
   }
 }

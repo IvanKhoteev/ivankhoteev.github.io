@@ -21,6 +21,7 @@ $desktop-two: 1400px;
     opacity: 0;
     position: relative;
     transition: all .5s ease;
+    z-index: -10;
 
     &--close {
       min-height: 60px;
@@ -117,6 +118,8 @@ $desktop-two: 1400px;
       border: none;
       min-height: 118px;
       margin-bottom: 6px;
+
+      transition: none;
 
       opacity: 1;
 
