@@ -235,6 +235,50 @@ $desktop-two: 1400px;
       padding-left: 1.25rem;
       padding-right: 1.25rem;
     }
+
+    &__about-main-wrapper {
+      height: auto;
+      flex-direction: row;
+      height: calc((636/625) * (100vw - 150px) / 2);
+    }
+
+    &__about_main {
+        flex-basis: 50%;
+        // height: auto;
+        // background: none;
+        // background-color: green;
+        margin: 0;
+        padding: 0;
+      }
+
+    &__about-additional {
+      flex-basis: 50%;
+      height: calc((636/625) * (100vw - 150px) / 2);
+      background-image: url("../images/about/about-additional-desktop-1400.jpg");
+      background-size: 110%, 100%, cover;
+      background-position: -1rem center;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__about-additional:before {
+      display: none;
+    }
+
+    &__button--about {
+      height: auto;
+
+      line-height: 1.3rem;
+      letter-spacing: 0.07rem;
+
+      padding-top: 0.1rem;
+      padding-left: 0.85rem;
+      padding-right: 0.75rem;
+
+      border: 0.05rem solid white;
+      margin-left: 1.9rem;
+      bottom: 2.2rem;
+    }
   }
 }
 
