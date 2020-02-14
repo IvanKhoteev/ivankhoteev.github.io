@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .goto-main {
   width: 100%;
   height: 100vw;
@@ -21,5 +24,40 @@
     line-height: 3.5rem;
     letter-spacing: 0.04rem;
     padding-left: 0.5rem;
+  }
+
+  @media (min-width: $desktop-one) {
+    width: 50%;
+    height: calc((650/625) * (100vw - 150px) / 2);
+    background-image: url("../images/goto/goto-main-desktop-1400.jpg");
+    background-position: top;
+    position: relative;
+
+    &__content {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__text {
+      padding: 0;
+      margin: 0;
+      margin-top: 9.45rem;
+      font-size: 1.46rem;
+      line-height: 3.5rem;
+      letter-spacing: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1.33rem;
+      height: 2.9rem;
+      background-image: url("../images/goto/goto-desktop-arror.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 45%;
+      right: 99%;
+    };
   }
 }

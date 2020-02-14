@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .social {
   &__list {
     display: flex;
@@ -35,5 +38,13 @@
   &__item--youtube {
     background-color: #c4070e;
     background-image: url("../images/socials/youtube.jpeg");
+  }
+
+  @media (min-width: $desktop-one) {
+    &__item {
+      width: 90px;
+      height: 90px;
+      background-size: 58%;
+    }
   }
 }

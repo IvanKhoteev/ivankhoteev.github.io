@@ -1,3 +1,6 @@
+$desktop-one: 680px;
+$desktop-two: 1400px;
+
 .page-footer {
   width: 100%;
   height: 42px;
@@ -27,5 +30,38 @@
   &__socials {
     display: flex;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop-one) {
+    margin-top: -0.35rem;
+    height: 90px;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    &__logo-image {
+      display: block;
+      margin-left: 21px;
+    }
+
+    &__main-copyright-without-point {
+      display: none;
+    }
+
+    &__main-copyright-with-point {
+      display: block;
+
+      margin-left: 5px;
+      padding-top: 6px;
+    }
+
+    &__additional-copyright-text {
+      display: block;
+
+      margin-left: 4px;
+      padding-top: 6px;
+      letter-spacing: -0.1px;
+    }
   }
 }
