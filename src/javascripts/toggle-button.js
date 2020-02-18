@@ -14,6 +14,7 @@ const toggleMenu = function () {
 
   for (var i = 0; i < menuItemWrappers.length; ++i) {
     menuItemWrappers[i].classList.toggle('main-nav__item-wrapper-animated');
+    menuItemWrappers[i].classList.toggle('hidden');
   }
 }
 
@@ -24,6 +25,7 @@ const closeMenu = function () {
 
   for (var i = 0; i < menuItemWrappers.length; ++i) {
     menuItemWrappers[i].classList.remove('main-nav__item-wrapper-animated');
+    menuItemWrappers[i].classList.toggle('hidden');
   }
 }
 
