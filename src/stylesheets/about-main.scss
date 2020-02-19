@@ -48,6 +48,16 @@ $desktop-two: 1400px;
     height: auto;
     position: relative;
 
+    transform: translate(-175px,0);
+    opacity: 0;
+    transition: opacity 1.2s ease,
+              transform 1s ease;
+
+    &--animated {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+
     &:after {
       content: '';
       position: absolute;

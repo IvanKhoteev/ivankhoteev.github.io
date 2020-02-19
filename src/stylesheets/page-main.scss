@@ -18,8 +18,6 @@ $desktop-two: 1400px;
     background-size: 100%, 100%, cover;
     background-repeat: no-repeat;
 
-    transition: opacity .1s ease;
-
     opacity: 0;
 
     &--animated {
@@ -142,7 +140,6 @@ $desktop-two: 1400px;
       bottom: -10%;
       left: 0;
       right: 0;
-      z-index: -1;
     };
   }
 
@@ -162,16 +159,24 @@ $desktop-two: 1400px;
       bottom: -1%;
       left: 0;
       right: 0;
-      z-index: -1;
     };
   }
 
   @media (min-width: $desktop-one) {
+    background-color: #ffda2d;
+
     &__promo {
       padding: 0;
       height: calc(580 / 1252 * (100vw - 150px));
       background-image: url("../images/promo/promo-desktop-1400.jpg");
       background-position: 0 0;
+      transform: translate(350px,0);
+      transition: opacity 1.2s ease,
+                transform 1s ease;
+
+      &--animated {
+        transform: translate(0,0);
+      }
     }
 
     &__content {
@@ -188,6 +193,16 @@ $desktop-two: 1400px;
       background-image: url("../images/gallery/gallery-desktop-1400.jpg");
       background-repeat: no-repeat;
       background-size: 50%, auto, cover;
+
+      transform: translate(-350px,0);
+      opacity: 0;
+      transition: opacity 1.2s ease,
+                transform 1s ease;
+
+      &--animated {
+        opacity: 1;
+        transform: translate(0,0);
+      }
     }
 
     &__gallery_main {
@@ -200,8 +215,6 @@ $desktop-two: 1400px;
     }
 
     &__gallery-additional {
-      flex-basis: 50%;
-      height: calc((100vw - 150px) / 2);
       background: none;
       background-color: white;
       margin: 0;
@@ -255,6 +268,17 @@ $desktop-two: 1400px;
       background-position: -1rem center;
       margin: 0;
       padding: 0;
+      box-shadow: none;
+
+      transform: translate(175px,0);
+      opacity: 0;
+      transition: opacity 1.2s ease,
+                transform 1s ease;
+
+      &--animated {
+        opacity: 1;
+        transform: translate(0,0);
+      }
     }
 
     &__about-additional:before {
@@ -296,6 +320,16 @@ $desktop-two: 1400px;
     &__goto-additional {
       width: 50%;
       height: auto;
+
+      transform: translate(-175px,0);
+      opacity: 0;
+      transition: opacity 1.2s ease,
+                transform 1s ease;
+
+      &--animated {
+        opacity: 1;
+        transform: translate(0,0);
+      }
 
       &:before {
         height: calc((650/625) * (100vw - 150px) / 2);

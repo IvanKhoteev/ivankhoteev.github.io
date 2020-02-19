@@ -33,6 +33,16 @@ $desktop-two: 1400px;
     background-position: top;
     position: relative;
 
+    transform: translate(175px,0);
+    opacity: 0;
+    transition: opacity 1.2s ease,
+              transform 1s ease;
+
+    &--animated {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+
     &__content {
       padding: 0;
       margin: 0;

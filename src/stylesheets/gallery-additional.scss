@@ -72,14 +72,16 @@ $desktop-two: 1400px;
 
   @media (min-width: $desktop-one) {
     flex-basis: 50%;
+    height: calc((637/625) * (100vw - 150px) / 2);
 
     &__images-list {
       box-sizing: border-box;
       padding: 0.45rem;
+      padding-bottom: 0.7rem;
     }
 
     &__item-wrapper {
-      top: 0.25rem;
+      top: 0.2rem;
       left: 0.15rem;
       right: 0.04rem;
       bottom: -0.05rem;
