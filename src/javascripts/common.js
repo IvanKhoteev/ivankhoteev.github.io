@@ -7,6 +7,21 @@ const gotoAdditional = document.querySelector('.page-main__goto-additional');
 promo.classList.add('page-main__promo--animated');
 galleryMain.classList.add('page-main__gallery-main-wrapper--animated');
 
+const aboutWrapper = document.querySelector('.page-main__about-main-wrapper');
+const aboutWrapperPosition = aboutWrapper.getBoundingClientRect();
+const gotoWrapper = document.querySelector('.page-main__goto-main-wrapper');
+const gotoWrapperPosition = gotoWrapper.getBoundingClientRect();
+
+if (aboutWrapperPosition.top < window.innerHeight && aboutWrapperPosition.bottom >= 0) {
+  aboutMain.classList.add('about-main--animated');
+  aboutAdditional.classList.add('page-main__about-additional--animated');
+}
+
+if (gotoWrapperPosition.top < window.innerHeight && gotoWrapperPosition.bottom >= 0) {
+  gotoMain.classList.add('goto-main--animated');
+  gotoAdditional.classList.add('page-main__goto-additional--animated');
+}
+
 
 const promoIcons = document.querySelectorAll('.promo-icon__item');
 for (var i = 0; i < promoIcons.length; ++i) {
