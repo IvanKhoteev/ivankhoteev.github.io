@@ -76,6 +76,10 @@ $desktop-two: 1400px;
   }
 
   @media (min-width: $desktop-one) {
+    .fixed-wrapper {
+      position: fixed;
+      width: 150px;
+    }
     position: static;
     width: 150px;
 
