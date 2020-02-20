@@ -1,9 +1,10 @@
 $desktop-one: 680px;
 $desktop-two: 1400px;
 
-@-webkit-keyframes slideUpIcon {
-  to {  transform: scale(1); }
-}
+@-webkit-keyframes slideUpIcon { to {  transform: scale(1); } }
+   @-moz-keyframes slideUpIcon { to {  transform: scale(1); } }
+     @-o-keyframes slideUpIcon { to {  transform: scale(1); } }
+        @keyframes slideUpIcon { to {  transform: scale(1); } } 
 
 .hidden {
   z-index: -10;

@@ -2,8 +2,33 @@
   from { transform: scale(0); }
   to {  transform: scale(1); }
 }
+@-moz-keyframes slideUpIcon {
+  from { transform: scale(0); }
+  to {  transform: scale(1); }
+}
+@-o-keyframes slideUpIcon {
+  from { transform: scale(0); }
+  to {  transform: scale(1); }
+}
+@keyframes slideUpIcon {
+  from { transform: scale(0); }
+  to {  transform: scale(1); }
+}
 
 @-webkit-keyframes showUp {
+  from { opacity: 0; }
+  to {  opacity: 1; }
+}
+
+@-moz-keyframes showUp {
+  from { opacity: 0; }
+  to {  opacity: 1; }
+}
+@-o-keyframes showUp {
+  from { opacity: 0; }
+  to {  opacity: 1; }
+}
+@keyframes showUp {
   from { opacity: 0; }
   to {  opacity: 1; }
 }
