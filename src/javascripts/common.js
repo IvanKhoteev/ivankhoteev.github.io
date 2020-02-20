@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 const promo = document.querySelector('.page-main__promo');
 const galleryMain = document.querySelector('.page-main__gallery-main-wrapper');
 const aboutMain = document.querySelector('.about-main');

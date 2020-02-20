@@ -27,6 +27,7 @@ $desktop-two: 1400px;
 
   &__item--vkontakte {
     background-color: #3479a8;
+    background-position-x: 15px;
     background-image: url("../images/socials/vkontakte.jpeg");
   }
 
@@ -42,7 +43,7 @@ $desktop-two: 1400px;
 
   @media (min-width: $desktop-one) {
     &__item {
-      width: 90px;
+      width: 6.4vw;
       height: 90px;
       background-size: 58%;
     }
