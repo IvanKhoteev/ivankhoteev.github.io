@@ -41,10 +41,34 @@ toggleButton.addEventListener('click', function() {
 
 let scroll = window.scrollY;
 const header = document.querySelector('.page-header');
+const aboutMainWrapper = document.querySelector('.page-main__about-main-wrapper');
 const aboutMain = document.querySelector('.about-main');
+const aboutAdditionalWrapper = document.querySelector('.page-main__about-additional-wrapper');
 const aboutAdditional = document.querySelector('.page-main__about-additional');
+const gotoMainWrapper = document.querySelector('.page-main__goto-main-wrapper');
 const gotoMain = document.querySelector('.goto-main');
+const gotoAdditionalWrapper = document.querySelector('.page-main__goto-additional-wrapper');
 const gotoAdditional = document.querySelector('.page-main__goto-additional');
+
+aboutMainWrapper.addEventListener('mouseover', function() {
+  aboutAdditionalWrapper.classList.add('page-main__about-additional-wrapper--animated');
+  gotoAdditionalWrapper.classList.remove('page-main__goto-additional-wrapper--animated');
+});
+
+aboutMainWrapper.addEventListener('mouseout', function() {
+  gotoAdditionalWrapper.classList.remove('page-main__goto-additional-wrapper--animated');
+  aboutAdditionalWrapper.classList.remove('page-main__about-additional-wrapper--animated');
+});
+
+gotoMainWrapper.addEventListener('mouseover', function() {
+  gotoAdditionalWrapper.classList.add('page-main__goto-additional-wrapper--animated');
+  aboutAdditionalWrapper.classList.remove('page-main__about-additional-wrapper--animated');
+});
+
+gotoMainWrapper.addEventListener('mouseout', function() {
+  gotoAdditionalWrapper.classList.remove('page-main__goto-additional-wrapper--animated');
+  aboutAdditionalWrapper.classList.remove('page-main__about-additional-wrapper--animated');
+});
 
 window.addEventListener('scroll', function(e) {
   if (window.scrollY - scroll > 50) {
@@ -64,11 +88,17 @@ window.addEventListener('scroll', function(e) {
   if (aboutWrapperPosition.top < window.innerHeight && aboutWrapperPosition.bottom >= 0) {
     aboutMain.classList.add('about-main--animated');
     aboutAdditional.classList.add('page-main__about-additional--animated');
+    setTimeout(function() {
+      aboutAdditionalWrapper.classList.add('page-main__about-additional-wrapper--animated');
+    }, 1000);
   }
 
   if (gotoWrapperPosition.top < window.innerHeight && gotoWrapperPosition.bottom >= 0) {
     gotoMain.classList.add('goto-main--animated');
     gotoAdditional.classList.add('page-main__goto-additional--animated');
+    // setTimeout(function() {
+    //   gotoAdditionalWrapper.classList.add('page-main__goto-additional-wrapper--animated');
+    // }, 1000);
   }
 })
 

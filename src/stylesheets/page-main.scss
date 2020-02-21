@@ -271,6 +271,11 @@ $desktop-two: 1400px;
 
     &__about-additional-wrapper {
       width: 50%;
+      transition: transform 10s linear;
+
+      &--animated {
+        transform: scale(1.15);
+      }
     }
 
     &__about-additional {
@@ -334,6 +339,11 @@ $desktop-two: 1400px;
 
     &__goto-additional-wrapper {
       width: 50%;
+      transition: transform 10s linear;
+
+      &--animated {
+        transform: scale(1.15);
+      }
     }
 
     &__goto-additional {
