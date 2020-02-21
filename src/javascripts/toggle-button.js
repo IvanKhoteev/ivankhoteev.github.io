@@ -39,3 +39,36 @@ toggleButton.addEventListener('click', function() {
   toggleMenu();
 });
 
+let scroll = window.scrollY;
+const header = document.querySelector('.page-header');
+const aboutMain = document.querySelector('.about-main');
+const aboutAdditional = document.querySelector('.page-main__about-additional');
+const gotoMain = document.querySelector('.goto-main');
+const gotoAdditional = document.querySelector('.page-main__goto-additional');
+
+window.addEventListener('scroll', function(e) {
+  if (window.scrollY - scroll > 50) {
+    header.classList.add('page-header--hidden');
+    scroll = window.scrollY;
+    closeMenu();
+  } else if (scroll - window.scrollY > 10) {
+    header.classList.remove('page-header--hidden');
+    scroll = window.scrollY;
+  }
+
+  const aboutWrapper = document.querySelector('.page-main__about-main-wrapper');
+  const aboutWrapperPosition = aboutWrapper.getBoundingClientRect();
+  const gotoWrapper = document.querySelector('.page-main__goto-main-wrapper');
+  const gotoWrapperPosition = gotoWrapper.getBoundingClientRect();
+
+  if (aboutWrapperPosition.top < window.innerHeight && aboutWrapperPosition.bottom >= 0) {
+    aboutMain.classList.add('about-main--animated');
+    aboutAdditional.classList.add('page-main__about-additional--animated');
+  }
+
+  if (gotoWrapperPosition.top < window.innerHeight && gotoWrapperPosition.bottom >= 0) {
+    gotoMain.classList.add('goto-main--animated');
+    gotoAdditional.classList.add('page-main__goto-additional--animated');
+  }
+})
+

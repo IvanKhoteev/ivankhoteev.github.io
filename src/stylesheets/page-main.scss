@@ -269,8 +269,12 @@ $desktop-two: 1400px;
         padding: 0;
       }
 
+    &__about-additional-wrapper {
+      width: 50%;
+    }
+
     &__about-additional {
-      flex-basis: 50%;
+      width: 100%;
       height: calc((636/625) * (100vw - 150px) / 2);
       background-image: url("../images/about/about-additional-desktop-1400.jpg");
       background-size: 110%, 100%, cover;
@@ -323,13 +327,17 @@ $desktop-two: 1400px;
 
     &__goto-main-wrapper {
       flex-direction: row-reverse;
-      height: calc((650/625) * (100vw - 150px) / 2);
+      height: calc((636/625) * (100vw - 150px) / 2);
       overflow: hidden;
       box-shadow: none;
     }
 
-    &__goto-additional {
+    &__goto-additional-wrapper {
       width: 50%;
+    }
+
+    &__goto-additional {
+      width: 100%;
       height: auto;
 
       transform: translate(-175px,0);
@@ -343,7 +351,7 @@ $desktop-two: 1400px;
       }
 
       &:before {
-        height: calc((638/625) * (100vw - 150px) / 2);
+        height: calc((636/625) * (100vw - 150px) / 2);
         background-image: url("../images/goto/goto-additional-desktop-1400.jpg");
         background-size: 102%, 100%, cover;
         background-repeat: no-repeat;
