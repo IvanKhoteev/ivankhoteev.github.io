@@ -363,7 +363,7 @@ $desktop-two: 1400px;
       &:before {
         height: calc((636/625) * (100vw - 150px) / 2);
         background-image: url("../images/goto/goto-additional-desktop-1400.jpg");
-        background-size: 102%, 100%, cover;
+        background-size: 100%, 100%, cover;
         background-repeat: no-repeat;
         background-position: bottom;
         top: 0;
