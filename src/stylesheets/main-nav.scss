@@ -129,7 +129,8 @@ $desktop-two: 1400px;
   &__item-link,
   &__item-link:hover,
   &__item-link:focus,
-  &__item-link:visited {
+  &__item-link:visited,
+  &__item-link:active {
     text-decoration: none;
     color: #555;
     margin: auto;
@@ -224,7 +225,8 @@ $desktop-two: 1400px;
     &__item-link,
     &__item-link:hover,
     &__item-link:focus,
-    &__item-link:visited {
+    &__item-link:visited,
+    &__item-link:active {
       min-width: 120px;
       margin: 10px 17px 0 auto;
     }
